@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>東急電鉄乗換案内</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>東急電鉄乗換案内</h1>
+		<h4>出発駅</h4>
+		<div class="select-content">
+			<label>路線</label>
+			<select class="start-train-line">
+				<option>東横線</option>
+				<option>目黒線</option>
+				<option>田園都市線</option>
+				<option>大井町線</option>
+				<option>池上線</option>
+				<option>東急多摩川線</option>
+				<option>世田谷線</option>
+				<option>こどもの国線</option>
+				<option>みなとみらい線</option>
+			</select>
+			<label>駅名</label>
+			<select class="train-station start-selected-line" id="start-toyoko">
+				<option>渋谷</option>
+				<option>代官山</option>
+				<option>中目黒</option>
+				<option>学芸大学</option>
+				<option>都立大学</option>
+				<option>自由が丘</option>
+				<option>田園調布</option>
+				<option>多摩川</option>
+				<option>新丸子</option>
+				<option>武蔵小杉</option>
+				<option>元住吉</option>
+				<option>日吉</option>
+				<option>綱島</option>
+				<option>大倉山</option>
+				<option>菊名</option>
+				<option>妙蓮寺</option>
+				<option>白楽</option>
+				<option>東白楽</option>
+				<option>反町</option>
+				<option>横浜</option>
+			</select>
+			<select class="train-station" id="start-meguro">
+				<option>目黒</option>
+				<option>不動前</option>
+				<option>武蔵小山</option>
+				<option>西小山</option>
+				<option>洗足</option>
+				<option>大岡山</option>
+				<option>奥沢</option>
+				<option>田園調布</option>
+				<option>多摩川</option>
+				<option>新丸子</option>
+				<option>武蔵小杉</option>
+				<option>元住吉</option>
+				<option>日吉</option>
+			</select>
+			<select class="train-station" id="start-denentoshi">
+				<option>渋谷</option>
+				<option>池尻大橋</option>
+				<option>駒澤大学</option>
+				<option>桜新町</option>
+				<option>用賀</option>
+				<option>二子玉川</option>
+				<option>二子新地</option>
+				<option>高津</option>
+				<option>溝の口</option>
+				<option>梶ヶ谷</option>
+				<option>宮崎台</option>
+				<option>宮前平</option>
+				<option>鷺沼</option>
+				<option>たまプラーザ</option>
+				<option>あざみ野</option>
+				<option>江田</option>
+				<option>市が尾</option>
+				<option>藤が丘</option>
+				<option>青葉台</option>
+				<option>田奈</option>
+				<option>長津田</option>
+				<option>つくし野</option>
+				<option>すずかけ台</option>
+				<option>南町田グランベリーパーク</option>
+				<option>つきみ野</option>
+				<option>中央林間</option>
+			</select>
+			<select class="train-station" id="start-ooimachi">
+				<option>大井町</option>
+				<option>下神明</option>
+				<option>戸越公園</option>
+				<option>中延</option>
+				<option>荏原町</option>
+				<option>旗の台</option>
+				<option>北千束</option>
+				<option>大岡山</option>
+				<option>緑が丘</option>
+				<option>自由が丘</option>
+				<option>九品仏</option>
+				<option>尾山台</option>
+				<option>等々力</option>
+				<option>上野毛</option>
+				<option>二子玉川</option>
+				<option>二子新地</option>
+				<option>高津</option>
+				<option>溝の口</option>
+			</select>
+			<select class="train-station" id="start-ikegami">
+				<option>五反田</option>
+				<option>大崎広小路</option>
+				<option>戸越銀座</option>
+				<option>荏原中延</option>
+				<option>旗の台</option>
+				<option>長原</option>
+				<option>洗足池</option>
+				<option>石川台</option>
+				<option>雪が谷大塚</option>
+				<option>御嶽山</option>
+				<option>久が原</option>
+				<option>千鳥町</option>
+				<option>池上</option>
+				<option>蓮沼</option>
+				<option>蒲田</option>
+			</select>
+			<select class="train-station" id="start-tamagawa">
+				<option>多摩川</option>
+				<option>沼部</option>
+				<option>鵜の木</option>
+				<option>下丸子</option>
+				<option>武蔵新田</option>
+				<option>谷口渡</option>
+				<option>蒲田</option>
+			</select>
+			<select class="train-station" id="start-setagaya">
+				<option>三軒茶屋</option>
+				<option>西太子堂</option>
+				<option>若林</option>
+				<option>松陰神社前</option>
+				<option>世田谷</option>
+				<option>上町</option>
+				<option>宮の坂</option>
+				<option>山下</option>
+				<option>松原</option>
+				<option>下高井戸</option>
+			</select>
+			<select class="train-station" id="start-kodomonokuni">
+				<option>長津田</option>
+				<option>恩田</option>
+				<option>こどもの国</option>
+			</select>
+			<select class="train-station" id="start-minatomirai">
+				<option>横浜</option>
+				<option>新高島</option>
+				<option>みなとみらい</option>
+				<option>馬車道</option>
+				<option>日本大通り</option>
+				<option>元町・中華街</option>
+			</select>
+		</div>
+		<h4>到着駅</h4>
+		<div class="select-content">
+			<label>路線</label>
+			<select class="goal-train-line">
+				<option>東横線</option>
+				<option>目黒線</option>
+				<option>田園都市線</option>
+				<option>大井町線</option>
+				<option>池上線</option>
+				<option>東急多摩川線</option>
+				<option>世田谷線</option>
+				<option>こどもの国線</option>
+				<option>みなとみらい線</option>
+			</select>
+			<label>駅名</label>
+			<select class="train-station goal-selected-line" id="goal-toyoko">
+				<option>渋谷</option>
+				<option>代官山</option>
+				<option>中目黒</option>
+				<option>学芸大学</option>
+				<option>都立大学</option>
+				<option>自由が丘</option>
+				<option>田園調布</option>
+				<option>多摩川</option>
+				<option>新丸子</option>
+				<option>武蔵小杉</option>
+				<option>元住吉</option>
+				<option>日吉</option>
+				<option>綱島</option>
+				<option>大倉山</option>
+				<option>菊名</option>
+				<option>妙蓮寺</option>
+				<option>白楽</option>
+				<option>東白楽</option>
+				<option>反町</option>
+				<option>横浜</option>
+			</select>
+			<select class="train-station" id="goal-meguro">
+				<option>目黒</option>
+				<option>不動前</option>
+				<option>武蔵小山</option>
+				<option>西小山</option>
+				<option>洗足</option>
+				<option>大岡山</option>
+				<option>奥沢</option>
+				<option>田園調布</option>
+				<option>多摩川</option>
+				<option>新丸子</option>
+				<option>武蔵小杉</option>
+				<option>元住吉</option>
+				<option>日吉</option>
+			</select>
+			<select class="train-station" id="goal-denentoshi">
+				<option>渋谷</option>
+				<option>池尻大橋</option>
+				<option>駒澤大学</option>
+				<option>桜新町</option>
+				<option>用賀</option>
+				<option>二子玉川</option>
+				<option>二子新地</option>
+				<option>高津</option>
+				<option>溝の口</option>
+				<option>梶ヶ谷</option>
+				<option>宮崎台</option>
+				<option>宮前平</option>
+				<option>鷺沼</option>
+				<option>たまプラーザ</option>
+				<option>あざみ野</option>
+				<option>江田</option>
+				<option>市が尾</option>
+				<option>藤が丘</option>
+				<option>青葉台</option>
+				<option>田奈</option>
+				<option>長津田</option>
+				<option>つくし野</option>
+				<option>すずかけ台</option>
+				<option>南町田グランベリーパーク</option>
+				<option>つきみ野</option>
+				<option>中央林間</option>
+			</select>
+			<select class="train-station" id="goal-ooimachi">
+				<option>大井町</option>
+				<option>下神明</option>
+				<option>戸越公園</option>
+				<option>中延</option>
+				<option>荏原町</option>
+				<option>旗の台</option>
+				<option>北千束</option>
+				<option>大岡山</option>
+				<option>緑が丘</option>
+				<option>自由が丘</option>
+				<option>九品仏</option>
+				<option>尾山台</option>
+				<option>等々力</option>
+				<option>上野毛</option>
+				<option>二子玉川</option>
+				<option>二子新地</option>
+				<option>高津</option>
+				<option>溝の口</option>
+			</select>
+			<select class="train-station" id="goal-ikegami">
+				<option>五反田</option>
+				<option>大崎広小路</option>
+				<option>戸越銀座</option>
+				<option>荏原中延</option>
+				<option>旗の台</option>
+				<option>長原</option>
+				<option>洗足池</option>
+				<option>石川台</option>
+				<option>雪が谷大塚</option>
+				<option>御嶽山</option>
+				<option>久が原</option>
+				<option>千鳥町</option>
+				<option>池上</option>
+				<option>蓮沼</option>
+				<option>蒲田</option>
+			</select>
+			<select class="train-station" id="goal-tamagawa">
+				<option>多摩川</option>
+				<option>沼部</option>
+				<option>鵜の木</option>
+				<option>下丸子</option>
+				<option>武蔵新田</option>
+				<option>谷口渡</option>
+				<option>蒲田</option>
+			</select>
+			<select class="train-station" id="goal-setagaya">
+				<option>三軒茶屋</option>
+				<option>西太子堂</option>
+				<option>若林</option>
+				<option>松陰神社前</option>
+				<option>世田谷</option>
+				<option>上町</option>
+				<option>宮の坂</option>
+				<option>山下</option>
+				<option>松原</option>
+				<option>下高井戸</option>
+			</select>
+			<select class="train-station" id="goal-kodomonokuni">
+				<option>長津田</option>
+				<option>恩田</option>
+				<option>こどもの国</option>
+			</select>
+			<select class="train-station" id="goal-minatomirai">
+				<option>横浜</option>
+				<option>新高島</option>
+				<option>みなとみらい</option>
+				<option>馬車道</option>
+				<option>日本大通り</option>
+				<option>元町・中華街</option>
+			</select>
+		</div>
+		<input type="button" class="search" value="検索">
+		<h4 class="hide-h4">所要時間</h4>
+		<p class="total-time"></p>
+		<h4 class="hide-h4">経路</h4>
+		<p class="route"></p>
+		<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
